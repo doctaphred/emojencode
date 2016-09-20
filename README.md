@@ -62,6 +62,8 @@ Requires Python 3.
 
 If `data` is not provided, reads from stdin.
 
+When decoding, any unrecognized characters are ignored.
+
 Example:
 
     $ emojencode 'Hello, 🌎!' > message.e64
@@ -69,6 +71,13 @@ Example:
     😒😆😕😬😛😆😼😬😈😏😂😟😣😈😸😡
     $ cat message.e64 | emojdecode
     Hello, 🌎!
+
+    $ emojdecode '
+    > cant belive how #blessed i am with such an
+    > awesome life ❤😚😒😝😭😈😇😍😯😈😆😅😬😛😶😹😥
+    > #weareyoung #lol #yolo
+    > '
+    i'm so alone
 
 
 ## License
