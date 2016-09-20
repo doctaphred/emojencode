@@ -38,3 +38,28 @@ def e64decode(emoji):
     """
     return b64decode(bytes(
         e64decode_map[emojus] for emojus in emoji if emojus in e64decode_map))
+
+
+if __name__ == '__main__':
+    import sys
+
+    usage = 'Usage: `python3 -m emojencode (encode|decode) [data]`'
+
+    try:
+        command = sys.argv[1]
+    except IndexError:
+        print(usage)
+        sys.exit(-1)
+
+    try:
+        data = sys.argv[2]
+    except IndexError:
+        data = input()
+
+    if command == 'encode':
+        print(e64encode(data.encode('utf-8')))
+    elif command == 'decode':
+        print(e64decode(data).decode('utf-8'))
+    else:
+        print(usage)
+        sys.exit(-1)
