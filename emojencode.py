@@ -40,7 +40,7 @@ def e64decode(emoji):
         e64decode_map[emojus] for emojus in emoji if emojus in e64decode_map))
 
 
-if __name__ == '__main__':
+def main():
     import sys
 
     usage = 'Usage: `python3 -m emojencode (encode|decode) [data]`'
@@ -63,3 +63,7 @@ if __name__ == '__main__':
     else:
         print(usage)
         sys.exit(-1)
+
+
+if __name__ == '__main__':
+    main()
