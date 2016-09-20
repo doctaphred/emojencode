@@ -55,7 +55,7 @@ Also this:
 Requires Python 3.
 
 
-## Console Script Usage
+## Console script usage
 
     emojencode [<data>]
     emojdecode [<data>]
@@ -64,13 +64,15 @@ If `data` is not provided, reads from stdin.
 
 When decoding, any unrecognized characters are ignored.
 
-Example:
+Example usage:
 
     $ emojencode 'Hello, 🌎!' > message.e64
     $ cat message.e64
     😒😆😕😬😛😆😼😬😈😏😂😟😣😈😸😡
     $ cat message.e64 | emojdecode
     Hello, 🌎!
+
+Advanced usage:
 
     $ emojdecode '
     > cant belive how #blessed i am with such an
