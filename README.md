@@ -55,6 +55,26 @@ Also this:
 Requires Python 3.
 
 
+## Standalone Usage
+
+    python3 -m emojencode (encode|decode) [<data>]
+
+If `data` is not provided, reads from stdin.
+
+Example:
+
+    $ python3 -m emojencode encode 'Hello, 🌎!' > message.e64
+    $ cat message.e64
+    😒😆😕😬😛😆😼😬😈😏😂😟😣😈😸😡
+    $ cat message.e64 | python3 -m emojencode decode
+    Hello, 🌎!
+
+
+## License
+
+    python3 -m emojencode decode "$(curl -fsSL https://raw.githubusercontent.com/doctaphred/emojencode/master/LICENSE)"
+
+
 ## To Do
 
 - more emoji
