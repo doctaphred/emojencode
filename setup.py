@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='emojencode',
-    version='1.2',
+    version='1.3',
     description='Encode binary data as emoji! 😄',
     author='Frederick "doctaphred" Wagner',
     author_email='yo@doctaph.red',
@@ -13,7 +13,8 @@ setup(
     py_modules=['emojencode'],
     entry_points={
         'console_scripts': [
-            'emojencode = emojencode:main',
+            'emojencode = emojencode:_encode',
+            'emojdecode = emojencode:_decode',
         ]
     },
 )

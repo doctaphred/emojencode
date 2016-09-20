@@ -40,30 +40,23 @@ def e64decode(emoji):
         e64decode_map[emojus] for emojus in emoji if emojus in e64decode_map))
 
 
-def main():
+def _encode():
+    """Console script entry point."""
+    print(e64encode(_get_input().encode('utf-8')), end='')
+
+
+def _decode():
+    """Console script entry point."""
+    print(e64decode(_get_input()).decode('utf-8'), end='')
+
+
+def _get_input():
     import sys
-
-    usage = 'Usage: `python3 -m emojencode (encode|decode) [data]`'
-
     try:
-        command = sys.argv[1]
+        return sys.argv[1]
     except IndexError:
-        print(usage)
-        sys.exit(-1)
-
-    try:
-        data = sys.argv[2]
-    except IndexError:
-        data = input()
-
-    if command == 'encode':
-        print(e64encode(data.encode('utf-8')), end='')
-    elif command == 'decode':
-        print(e64decode(data).decode('utf-8'), end='')
-    else:
-        print(usage)
-        sys.exit(-1)
-
-
-if __name__ == '__main__':
-    main()
+        try:
+            return input()
+        except KeyboardInterrupt:
+            print('Usage: `python3 -m emojencode (encode|decode) [data]`')
+            sys.exit(-1)

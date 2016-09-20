@@ -55,24 +55,25 @@ Also this:
 Requires Python 3.
 
 
-## Standalone Usage
+## Console Script Usage
 
-    python3 -m emojencode (encode|decode) [<data>]
+    emojencode [<data>]
+    emojdecode [<data>]
 
 If `data` is not provided, reads from stdin.
 
 Example:
 
-    $ python3 -m emojencode encode 'Hello, 🌎!' > message.e64
+    $ emojencode 'Hello, 🌎!' > message.e64
     $ cat message.e64
     😒😆😕😬😛😆😼😬😈😏😂😟😣😈😸😡
-    $ cat message.e64 | python3 -m emojencode decode
+    $ cat message.e64 | emojdecode
     Hello, 🌎!
 
 
 ## License
 
-    python3 -m emojencode decode "$(curl -fsSL https://raw.githubusercontent.com/doctaphred/emojencode/master/LICENSE)"
+    emojdecode "$(curl -fsSL https://raw.githubusercontent.com/doctaphred/emojencode/master/LICENSE)"
 
 
 ## To Do
