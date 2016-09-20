@@ -1,3 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
+python3 -m flake8 emojencode.py
 python3 -m doctest emojencode.py README.md
