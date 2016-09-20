@@ -57,9 +57,9 @@ if __name__ == '__main__':
         data = input()
 
     if command == 'encode':
-        print(e64encode(data.encode('utf-8')))
+        print(e64encode(data.encode('utf-8')), end='')
     elif command == 'decode':
-        print(e64decode(data).decode('utf-8'))
+        print(e64decode(data).decode('utf-8'), end='')
     else:
         print(usage)
         sys.exit(-1)
