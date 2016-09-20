@@ -48,6 +48,10 @@ Also this:
 
 ```
 
+## Installation
+
+    pip3 install emojencode
+
 Requires Python 3.
 
 
