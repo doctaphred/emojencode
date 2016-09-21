@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='emojencode',
-    version='1.3',
+    version='1.3.1',
     description='Encode binary data as emoji! 😄',
     author='Frederick "doctaphred" Wagner',
     author_email='yo@doctaph.red',

@@ -58,5 +58,10 @@ def _get_input():
         try:
             return input()
         except KeyboardInterrupt:
-            print('Usage: `python3 -m emojencode (encode|decode) [data]`')
+            print(
+                '\n'
+                'Usage: `emojencode [<data>]`\n'
+                '       `emojdecode [<data>]`\n'
+                'If <data> is omitted, reads from stdin.'
+            )
             sys.exit(-1)
